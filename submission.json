@@ -1,0 +1,30 @@
+{
+  "assignments": [
+    {
+      "tx_id": "T1",
+      "channel_id": "BULK",
+      "start_time": 0
+    },
+    {
+      "tx_id": "T2",
+      "channel_id": "BULK",
+      "start_time": 1
+    },
+    {
+      "tx_id": "T3",
+      "channel_id": "BULK",
+      "start_time": 2
+    },
+    {
+      "tx_id": "T4",
+      "channel_id": "BULK",
+      "start_time": 3
+    },
+    {
+      "tx_id": "T5",
+      "channel_id": "BULK",
+      "start_time": 5
+    }
+  ],
+  "total_system_cost_estimate": 0.0
+}

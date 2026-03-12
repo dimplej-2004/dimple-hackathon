@@ -1,0 +1,237 @@
+/* Global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background: #f5f7fa;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    margin: 0 0 16px;
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(135deg, #5b6cb5, #2d2d7e);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.hero .subtitle {
+    font-size: 1.25rem;
+    font-style: italic;
+}
+.hero .description {
+    margin: 20px 0;
+    font-size: 1.1rem;
+}
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.primary-btn, .secondary-btn {
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+}
+.primary-btn {
+    background: #4a90e2;
+    color: white;
+}
+.secondary-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+.primary-btn:hover, .secondary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Channels Overview */
+.channels-overview {
+    padding: 60px 20px;
+    text-align: center;
+}
+.channels-overview .cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    width: 220px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+/* How It Works */
+.how-it-works {
+    background: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+.steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.step {
+    max-width: 180px;
+}
+.step-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+.arrow {
+    font-size: 2rem;
+}
+
+/* Upload Section */
+.upload-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f0f4ff;
+}
+#drop-area {
+    border: 3px dashed #4a90e2;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    transition: background 0.3s;
+}
+#drop-area.highlight {
+    background: #e3f2ff;
+}
+.hidden {
+    display: none;
+}
+
+/* CTA */
+.cta {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Results */
+.results-section {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+}
+.json-output {
+    text-align: left;
+    max-height: 300px;
+    overflow: auto;
+    background: #f0f0f0;
+    padding: 16px;
+    border-radius: 4px;
+    margin: 0 auto 40px;
+    max-width: 800px;
+}
+.summary {
+    font-size: 0.95rem;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+    background: #fafafa;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* compact mode simplifies the results display */
+.results-section.compact .json-output {
+    max-height: 100px;
+    font-size: 0.8rem;
+}
+.results-section.compact .summary {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+}
+
+/* optimization results section */
+.opt-results-section {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+.opt-results-section .json-output {
+    max-height: 200px;
+    margin: 0 auto 20px;
+}
+.opt-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+.opt-table th, .opt-table td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: center;
+}
+.opt-table th {
+    background: #e0e0e0;
+}
+.opt-results-section .summary {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+/* Footer */
+footer {
+    background: #2d2d7e;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+footer em {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.9rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 10px;
+    }
+    .channels-overview .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .steps {
+        flex-direction: column;
+    }
+    .arrow {
+        display: none;
+    }
+}

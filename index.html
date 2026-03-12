@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSettle &ndash; Payment Routing &amp; Settlement Optimizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>SmartSettle</h1>
+            <p class="subtitle">Payment Routing &amp; Settlement Optimizer</p>
+            <p class="description">SmartSettle intelligently routes digital payment transactions across multiple channels to minimize cost and delays.</p>
+            <div class="hero-buttons">
+                <button id="upload-btn" class="primary-btn">Upload Transactions</button>
+                <button id="run-btn" class="secondary-btn">Run Optimization</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Channels Overview -->
+    <section class="channels-overview">
+        <h2>Channels Overview</h2>
+        <div class="cards">
+            <div class="card" id="card-fast">
+                <div class="icon">⚡</div>
+                <h3>FAST</h3>
+                <ul>
+                    <li>Very fast processing</li>
+                    <li>High cost</li>
+                    <li>Limited capacity</li>
+                </ul>
+            </div>
+            <div class="card" id="card-standard">
+                <div class="icon">⏱️</div>
+                <h3>STANDARD</h3>
+                <ul>
+                    <li>Medium speed</li>
+                    <li>Medium cost</li>
+                    <li>Moderate capacity</li>
+                </ul>
+            </div>
+            <div class="card" id="card-bulk">
+                <div class="icon">📦</div>
+                <h3>BULK</h3>
+                <ul>
+                    <li>Slow processing</li>
+                    <li>Very low cost</li>
+                    <li>High capacity</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-icon">1️⃣</div>
+                <p>Upload <strong>transactions.csv</strong></p>
+            </div>
+            <div class="arrow">&#8594;</div>
+            <div class="step">
+                <div class="step-icon">2️⃣</div>
+                <p>SmartSettle analyzes transactions</p>
+            </div>
+            <div class="arrow">&#8594;</div>
+            <div class="step">
+                <div class="step-icon">3️⃣</div>
+                <p>Optimization algorithm selects best channels</p>
+            </div>
+            <div class="arrow">&#8594;</div>
+            <div class="step">
+                <div class="step-icon">4️⃣</div>
+                <p>System displays optimized routing results</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Upload Section -->
+    <section class="upload-section">
+        <h2>Upload Transactions</h2>
+        <div id="drop-area">
+            <form class="my-form">
+                <p>Drag &amp; drop a CSV file here, or click to select one</p>
+                <input type="file" id="fileElem" accept=".csv" onchange="handleFiles(this.files)">
+            </form>
+            <div id="file-info" class="hidden">
+                <p><strong>File:</strong> <span id="file-name"></span></p>
+                <p><strong>Transactions:</strong> <span id="tx-count"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optimization results -->
+    <section class="opt-results-section hidden" id="opt-results-section">
+        <h2>Optimization Results</h2>
+        <div id="opt-summary" class="summary"></div>
+        <table id="opt-table" class="opt-table">
+            <thead>
+                <tr><th>TX ID</th><th>Channel</th><th>Start</th><th>Fee</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <p><strong>Total cost estimate:</strong> <span id="opt-cost"></span></p>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="cta">
+        <button id="start-opt-btn" class="primary-btn">Start Optimization</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>SmartSettle &ndash; Payment Routing &amp; Settlement Optimizer</p>
+        <p>Intelligent routing for digital payments</p>
+        <p><em>Hackathon / Final Year Project</em></p>
+    </footer>
+
+    <!-- result display -->
+    <section class="results-section hidden" id="results-section">
+        <h2>Parsed Transactions</h2>
+        <button id="toggle-json-btn" class="secondary-btn">Toggle JSON view</button>
+        <pre id="json-output" class="json-output"></pre>
+        <div id="summary" class="summary"></div>
+        <h2>Transaction Summary</h2>
+        <canvas id="chart"></canvas>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
